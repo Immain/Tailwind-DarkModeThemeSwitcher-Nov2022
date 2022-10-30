@@ -1,7 +1,10 @@
 # Tailwind-DarkModeThemeSwitcher-Nov2022
 Switch Between light and dark modes using Tailwind and React
 
-# Setup 
+## Description:
+This light/dark theme is set to switch to the system default. If you system theme is dark, the theme will be set to dark. If you system theme is light, it will be set to light. This also applies to iOS and Android devices, as well as MacOS devices. If you still would like for the website to be in a light/or dark mode, you can toggle between light/dark, over-riding you systems current theme.
+
+# Setup:
 
 If you want to support toggling dark mode manually instead of relying on the operating system preference, use the class strategy instead of the media strategy:
 
