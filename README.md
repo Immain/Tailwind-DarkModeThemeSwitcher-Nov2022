@@ -51,4 +51,8 @@ next, under public > ```index.html``` set the body to the following configuratio
     -->
   </body>
 ```
+To use Dark Mode in your ```.js``` or ```.jsx``` file, simply import ```useState, useEffect```
+```
+import React, {useState, useEffect} from 'react'
+```
 
