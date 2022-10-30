@@ -3,7 +3,7 @@ Switch Between light and dark modes using Tailwind and React
 
 # Setup 
 
-To manually toggle dark mode in tailwind, set the following configuration:
+If you want to support toggling dark mode manually instead of relying on the operating system preference, use the class strategy instead of the media strategy:
 
 ```tailwind.config.js```
 ```
@@ -12,7 +12,28 @@ module.exports = {
   // ...
 }
 ```
+Now instead of dark:{class} classes being applied based on prefers-color-scheme, they will be applied whenever dark class is present earlier in the HTML tree.
+```
+<!-- Dark mode not enabled -->
+<html>
+<body>
+  <!-- Will be white -->
+  <div class="bg-white dark:bg-black">
+    <!-- ... -->
+  </div>
+</body>
+</html>
 
+<!-- Dark mode enabled -->
+<html class="dark">
+<body>
+  <!-- Will be black -->
+  <div class="bg-white dark:bg-black">
+    <!-- ... -->
+  </div>
+</body>
+</html>
+```
 next, under public > ```index.html``` set the body to the following configuration:
 ```
   <body className="dark">
